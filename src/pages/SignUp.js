@@ -10,8 +10,8 @@ import {
 } from 'react-native';
 import {Formik, Field} from 'formik';
 import * as yup from 'yup';
-import CustomInput from './CustomInput';
-import {styles} from './styles';
+import CustomInput from '../componets/CustomInput';
+import {styles} from '../componets/styles';
 
 const SignUp = () => {
   const signUpValidationSchema = yup.object().shape({
@@ -45,7 +45,7 @@ const SignUp = () => {
   });
   return (
     <View style={styles.loginContainer}>
-      <Text>Sign Up Screen</Text>
+      {/* <Text>Sign Up</Text> */}
 
       <Formik
         initialValues={{

@@ -9,6 +9,12 @@
 import {types} from '@babel/core';
 import React from 'react';
 import {Node} from 'react';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+import Header from './componets/Header';
+import Section from './componets/Section';
+import SignIn from './pages/SignIn';
+import {styles} from './styles';
+import SignUp from './pages/SignUp';
 import {
   SafeAreaView,
   ScrollView,
@@ -16,12 +22,6 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import Header from './componets/Header';
-import Section from './componets/Section';
-import SignIn from './componets/SignIn';
-import {styles} from './styles';
-import SignUp from './componets/SignUp';
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -45,7 +45,7 @@ const App: () => Node = () => {
             },
           ]}>
           <Section title="Amerikan Estetik Otel Transfer"></Section>
-          <SignUp />
+          <SignIn />
         </View>
       </ScrollView>
     </SafeAreaView>

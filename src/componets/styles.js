@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
   textInput: {
     height: 40,
     width: '100%',
+    padding: 10,
     margin: 10,
     backgroundColor: 'white',
     borderColor: 'gray',

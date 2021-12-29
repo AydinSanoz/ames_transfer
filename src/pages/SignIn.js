@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, TextInput, Button} from 'react-native';
 import {Formik} from 'formik';
 import {View} from 'react-native';
-import {styles} from './styles';
+import {styles} from '../componets/styles';
 import * as yup from 'yup';
 
 const loginValidationSchema = yup.object().shape({
@@ -19,7 +19,7 @@ const loginValidationSchema = yup.object().shape({
 const SignIn = () => {
   return (
     <View style={styles.loginContainer}>
-      <Text>Login Screen</Text>
+      {/* <Text>Login Screen</Text> */}
       <Formik
         validationSchema={loginValidationSchema}
         initialValues={{email: '', password: ''}}
@@ -60,6 +60,10 @@ const SignIn = () => {
               </Text>
             )}
             <Button onPress={handleSubmit} title="LOGIN" disabled={!isValid} />
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Text>Don't you have accout</Text>
+              <Button title="SignUp" />
+            </View>
           </>
         )}
       </Formik>
